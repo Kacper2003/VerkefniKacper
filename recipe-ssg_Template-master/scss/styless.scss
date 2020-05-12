@@ -1,0 +1,85 @@
+@import 'layout', 'icomoon','slide';
+*{font-family: 'Raleway', sans-serif;}
+h1{text-align: center;}
+body { 
+    background-color: #2f3640;
+    color: #fff;
+} 
+.ad{
+    //animation: mymove1 5s infinite;
+    left: -250px;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation-name: example;
+ 
+    animation-duration: 10s;
+  }
+  @keyframes example {
+    0%   {left:500px; top:0px;}
+    100% {left:-500px; top:0px;}
+}
+.ad1 *{
+    left: 0;
+    position: relative;
+    animation-name: example;
+    color: #fff;
+    text-decoration: none;
+    animation-duration: 3s;
+  }
+  @keyframes example {
+    0%   {left:500px; top:0px;}
+    100% {left:250; top:0px;}
+}
+.card {
+    background-color: #fff;
+    color: #000;
+    border-radius: .4em;
+    padding: 1em;
+}
+.card a{
+    background: #353b48;
+    transition: all 0.3s;
+    color: #fff;
+    padding: .15em;
+    text-decoration: none;
+    border: 0.5;
+    border-radius: 1.2em;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.stretch {
+    display: grid;
+    justify-content: stretch;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    margin-top: 3em;
+}
+ 
+.mybutton {
+    text-align: center;
+    background: #353b48;
+    color: #fff;
+    border: 0.5;
+    font-size: 0.75em;
+    margin: .3em 0;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 1.2em;
+    height: auto;
+    box-shadow: 0 0 transparent inset;
+}
+.paddin{
+    padding-left:5em;
+}
+table {
+    padding-left: 20em;
+    color : #fff;
+}
+table td {
+    border: solid #b2bec3;
+}

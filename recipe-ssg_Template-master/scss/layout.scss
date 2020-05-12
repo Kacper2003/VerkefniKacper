@@ -1,0 +1,120 @@
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 1em;
+}
+.auglysing {
+    background: #2f3640;
+    grid-area: auglysing;
+    border: 1px dotted;
+    padding: 1em;
+    text-align: center;
+    color: #fff;
+}
+.sMedia a {
+    margin-top: 1.5em;
+    text-decoration: none;
+}
+.sMedia {
+    border: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row;
+    flex-flow: row;
+    position: relative;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+.gap-4 {
+    grid-gap: 4em
+}
+.col-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2em;
+}
+.col-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2em;
+}
+.col-4 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2em;
+}
+.topmenu li :hover,.active{
+   background: #3f4650;
+}
+.topmenu a {
+    color: #fff;
+    text-decoration: none;
+}
+.topmenu{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2em;
+}
+@media screen and (min-width:37.5em) {
+    .container {
+        max-width: 40em;
+        margin: 0 auto;
+    }
+    .col-2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2em;
+    }
+    .col-3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2em;
+    }
+    .col-4 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2em;
+    }
+    .topmenu{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2em;
+    }
+}
+@media screen and (min-width:60em) {
+    .container {
+        max-width: 70em;
+        margin: 0 auto;
+    }
+    .col-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2em;
+    }
+    .col-3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2em;
+    }
+    .col-4 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 2em;
+    }
+    .topmenu{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 2em;
+    }
+    .sMedia{
+    display: block;
+    position: fixed;
+    top: 7em;
+    right: .4em;
+    height: 10em;
+    width: 2.5em;
+    }
+}

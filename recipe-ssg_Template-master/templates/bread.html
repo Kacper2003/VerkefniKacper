@@ -1,0 +1,78 @@
+
+{% extends "frontpage.html" %}
+
+{% block content %}
+<nav class="topnav">
+    <ul class="topmenu">
+        <li><a href="bread.html" class="active"><span class="icon-Bread"></span> Bread</a></li>
+        <li><a href="#"><span class="icon-Starters"></span> Starters</a></li>
+        <li><a href="#"><span class="icon-Meals"></span> Main Courses</a></li>
+        <li><a href="#"><span class="icon-Sweets"></span> Desserts</a></li>
+        <li><a href="#"><span class="icon-Drinks"></span> Drinks</a></li>
+        <li><a href="forum.html"><span class="icon-forum"></span> Forum</a></li>
+    </ul>
+</nav>
+<div class="splashlogo"><a href="index.html">
+    <img src="img/my-recipes.svg" width="50%" title="myrecipes logo">
+    </a>
+</div>
+<div class="col-3">
+
+{% for post in posts %}
+
+    <div>
+
+        <article class="card">
+            <header>
+                <img src="{{ post.thumbnail }}">
+            </header>
+            <footer>
+                <h2>{{ post.title }}</h2>
+                <small>{{ post.date }}</small>
+                <p>
+                    {{ post.summary}}
+                </p>
+                <a class="button" href="posts/{{ post.slug }}.html">Recipe</a>
+                <br>
+                {% set list_of_tags = post.tags.split(",") %}
+                {% for tag in list_of_tags %}
+                    <button class="shyButton mybutton">{{ tag }}</button>
+                {% endfor %}
+            </footer>
+            
+        </article>
+
+    </div>
+    <div class="sMedia">
+        <div class="bubbles">
+            <a href="http://twitter.com" title="Twitter">
+                <span class="icon-twitter"> </span>
+            </a>
+        </div>
+        <div class="facebook">
+            <a href="https://facebook.com" title="Facebook">
+                <span class="icon-facebook2"> </span>
+            </a> 
+        </div>
+        <div class="github"> 
+            <a href="https://github.com/Tardis2105/resipies_Template/tree/gh-pages" title="Github">
+                <span class="icon-github"> </span>
+            </a>
+        </div>
+        <div class="soundcloud"> 
+            <a href="https://soundcloud.com/" title="Soundcloud">
+                <span class="icon-soundcloud"> </span>
+            </a>
+        </div>
+    </div>
+<!-- 
+    <p>
+            <h2>{{loop.index}}: <a href="posts/{{ post.slug }}.html">{{post.title}}</a> <small>{{post.date}}</small></h2>
+            {{post.summary}}
+        </p> -->
+
+{% endfor %}
+
+</div>
+
+{% endblock %}
